@@ -9,6 +9,8 @@ const people = [
   { name: 'Charlie', age: 22, gender: 'female' },
   { name: 'David', age: 35, gender: 'male' },
   { name: 'Eva', age: 28, gender: 'female' },
+  { name: 'Harry', age: 21, gender: 'male' },
+  { name: 'Hermione', age: 21, gender: 'female' },
 ];
 
 // const filterAndMapNames = people.filter(person => person.gender === 'female').map(person => person.name);
