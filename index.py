@@ -19,27 +19,17 @@ def filter_and_map_names(people):
 
 print(filter_and_map_names(people))
 
+# 2.Task: Object Manipulation
+# Create an array of objects representing books with properties like title, author, and year. Write a function that takes the array and returns a new array with only the book titles. Print the result.
 
-#  people = [
-#   { name: 'Alice', age: 25, gender: 'female' },     
-#   { name: 'Bob', age: 30, gender: 'male' },
-#   { name: 'Charlie', age: 22, gender: 'female' },
-#   { name: 'David', age: 35, gender: 'male' },
-#   { name: 'Eva', age: 28, gender: 'female' },
-#   { name: 'Harry', age: 21, gender: 'male' },
-#   { name: 'Hermione', age: 21, gender: 'female' },
-# ];
+books = [
+    {"title": "1984", "author": "George Orwell", "year": 1948},
+    {"title": "To Kill a Mockingbird", "author": "Harper Lee", "year": 1960},
+    {"title": "The Great Gatsby", "author": "F. Scott Fitzgerald", "year": 1925},
+    {"title": "Pride and Prejudice", "author": "Jane Austen", "year": 1813},
+]
 
-# // const filterAndMapNames = people.filter(person => person.gender === 'female').map(person => person.name);
+def get_book_titles(books):
+    return [book["title"] for book in books]
 
-# // console.log(filterAndMapNames)
-
-# const filterAndMapNames = (arrayOfPeople) => { 
-#   return arrayOfPeople
-#     .filter(person => person.gender === 'female')
-#     .map(person => person.name);
-# }
-
-# console.log(filterAndMapNames(people));
-
-
+print(get_book_titles(books))
