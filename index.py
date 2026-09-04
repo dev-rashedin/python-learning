@@ -71,3 +71,23 @@ def sort_cars_by_year(cars):
     return sorted(cars, key=lambda car: car["year"])
 
 print(sort_cars_by_year(cars))
+
+
+# 5.Task: Find and Modify
+# Write a function that searches an array of objects for a specific person by name. If found, modify their age property. Print the updated array.
+
+array_of_people = [
+    {"name": "Alice", "age": 25, "gender": "female"},
+    {"name": "Bob", "age": 30, "gender": "male"},
+    {"name": "Charlie", "age": 22, "gender": "female"},
+    {"name": "David", "age": 35, "gender": "male"},
+]
+
+def find_and_modify_person(array_of_people, name, new_age):
+    for person in array_of_people:
+        if person["name"] == name:
+            person["age"] = new_age
+            break
+    return array_of_people
+
+print(find_and_modify_person(array_of_people, "Alice", 26))
