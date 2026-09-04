@@ -33,3 +33,24 @@ def get_book_titles(books):
     return [book["title"] for book in books]
 
 print(get_book_titles(books))
+
+
+
+# 3.Task: Function Composition
+# Write three functions: one to square a number, one to double a number, and one to add 5 to a number. Compose these functions to create a new function that squares a number, doubles the result, and then adds 5.
+
+def square(x):
+    return x ** 2
+
+def double(x):
+    return x * 2
+
+def add_five(x):
+    return x + 5
+
+def compose(f, g):
+    return lambda x: f(g(x))
+
+square_then_double_then_add_five = compose(square, double, add_five)
+
+print(square_then_double_then_add_five(3))
