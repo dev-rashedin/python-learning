@@ -48,9 +48,26 @@ def double(x):
 def add_five(x):
     return x + 5
 
-def compose(f, g):
-    return lambda x: f(g(x))
+def compose(f, g, h):
+    return lambda x: h(g(f(x)))
 
 square_then_double_then_add_five = compose(square, double, add_five)
 
 print(square_then_double_then_add_five(3))
+
+
+
+# 4.Task: Sorting Objects
+# Create an array of objects representing cars with properties like make, model, and year. Write a function to sort the array of cars by the year of manufacture in ascending order. Print the sorted array.
+
+cars = [
+    {"make": "Toyota", "model": "Camry", "year": 2018},
+    {"make": "Honda", "model": "Civic", "year": 2020},
+    {"make": "Ford", "model": "Mustang", "year": 2015},
+    {"make": "Chevrolet", "model": "Malibu", "year": 2019}, 
+]
+
+def sort_cars_by_year(cars):
+    return sorted(cars, key=lambda car: car["year"])
+
+print(sort_cars_by_year(cars))
